@@ -1,0 +1,26 @@
+version: '3'
+services:
+ clamav:
+  image: ps/clamav
+  container_name: clamav
+  restart: unless-stopped
+  ports:
+      - 3310:3310
+  tty: true
+  environment:
+      HTTP_PROXY: contabo.wikidemo.ir:3128
+      HTTPs_PROXY: contabo.wikidemo.ir:3128
+  volumes:
+      - clamd_data:/var/lib/clamav
+      - ./etc/crontab:/etc/crontab
+      - ./etc/clamav/clamd.conf:/etc/clamav/clamd.conf
+      - ./etc/clamav/freshclam.conf/etc/clamav/freshclam.conf
+  ulimits:
+      nproc: 65535
+      nofile:
+          soft: 49999
+          hard: 99999
+
+volumes:
+  clamd_data:
+    driver: local
