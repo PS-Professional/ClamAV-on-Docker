@@ -11,7 +11,7 @@ Developed by PS-Professional
 
 ## What is ClamAV?
 
-ClamAV is a command-line anti-virus which can scan your files by you command-line input or automatic scanning schedule. ClamAV can detect over 1 million viruses, worms and trojants, including Microsoft Office macro viruses, mobile malwares and other threats. For more information, visit ![ClamAV documentation](https://clamav.net/document/introduction) on thier website.
+ClamAV is a command-line anti-virus which can scan your files by you command-line input or automatic scanning schedule. ClamAV can detect over 1 million viruses, worms and trojants, including Microsoft Office macro viruses, mobile malwares and other threats. For more information, visit [ClamAV documentation](https://clamav.net/document/introduction) on thier website.
 
 ## What will this project do?
 
