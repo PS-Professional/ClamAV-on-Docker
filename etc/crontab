@@ -1,0 +1,5 @@
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+00 * * * * /usr/bin/env bash -c 'freshclam --quiet' 2>&1
+05 * * * * /usr/bin/env bash -c 'clam-test'
