@@ -8,8 +8,8 @@ services:
       - 3310:3310
   tty: true
   environment:
-      HTTP_PROXY: contabo.wikidemo.ir:3128
-      HTTPs_PROXY: contabo.wikidemo.ir:3128
+      http_proxy: contabo.wikidemo.ir:3128
+      https_proxy: contabo.wikidemo.ir:3128
   volumes:
       - clamd_data:/var/lib/clamav
       - ./etc/crontab:/etc/crontab
