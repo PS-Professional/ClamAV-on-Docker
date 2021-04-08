@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 /etc/init.d/clamav-freshclam start
 /etc/init.d/clamav-daemon start
+freshclam
 echo "Everything ready to go!"
 sleep 2
 STATE=0
