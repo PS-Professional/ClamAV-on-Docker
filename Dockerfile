@@ -7,6 +7,9 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y clamav \
 	clamdscan
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+#Set proxy
+RUN export http_proxy=contabo.wikidemo.ir:3128 && \
+	export https_proxy=contabo.wikidemo.ir:3128
 #Update virus database for first time and copy samples
 COPY test-clam /test-clam
 RUN freshclam
