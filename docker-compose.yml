@@ -14,7 +14,7 @@ services:
       - clamd_data:/var/lib/clamav
       - ./etc/crontab:/etc/crontab
       - ./etc/clamav/clamd.conf:/etc/clamav/clamd.conf
-      - ./etc/clamav/freshclam.conf/etc/clamav/freshclam.conf
+      - ./etc/clamav/freshclam.conf:/etc/clamav/freshclam.conf
   ulimits:
       nproc: 65535
       nofile:
