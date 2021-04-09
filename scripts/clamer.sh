@@ -41,6 +41,13 @@ function restart(){
         /etc/init.d/clamav-daemon restart
 }
 
+function help(){
+	echo "Usege:"
+        echo -e "status\t\t Show service status"
+        echo -e "freshclam\t Update ClamAV virus databases"
+        echo -e "update\t\t Check and update container packages"
+        echo -e "restart\t\t Restart ClamAV services"
+}
 #Main function
 sleep 1
 case $1 in
@@ -52,4 +59,6 @@ case $1 in
 		os_update;;
 	restart )
 		restart;;
+	* )
+		help;;
 esac
