@@ -96,6 +96,7 @@ case $func in
 		echo -e "status\t\t Show service status"
 		echo -e "freshclam\t Update ClamAV virus databases"
 		echo -e "update\t\t Check and update container packages"
+		echo -e "result\t\t Show your system scan results"
 		echo -e "bash\t\t Start bash shell in container"
 		echo -e "restart\t\t Restart ClamAV services"
 		echo -e "exit\t\t Exit"
@@ -108,6 +109,8 @@ case $func in
 				sudo docker-compose exec clamav clamer freshclam;;
 			update )
 				sudo docker-compose exec clamav clamer update;;
+			result )
+				sudo docker-compose exec clamav cat /os-scan-result.txt;;
 			bash )
 				sudo docker-compose exec clamav bash;;
 			restart )
