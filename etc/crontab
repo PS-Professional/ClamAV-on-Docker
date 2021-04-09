@@ -1,6 +1,6 @@
 SHELL=/bin/bash
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
-00 * * * * /usr/bin/env bash -c 'freshclam --quiet' 2>&1
-05 * * * * /usr/bin/env bash -c 'clam-test'
-00 00 * * * /usr/bin/env bash -c 'date >> /os-scan-result.txt && clamdscan -v -m /os-scan >> /os-scan-result.txt' 
+00 * * * * root /usr/bin/env bash -c 'freshclam --quiet' 2>&1
+05 * * * * root /usr/bin/env bash -c 'clam-test'
+00 00 * * * root /usr/bin/env bash -c 'date >> /os-scan-result.txt && clamdscan -v -m /os-scan >> /os-scan-result.txt' 
