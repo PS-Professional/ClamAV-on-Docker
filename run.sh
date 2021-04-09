@@ -93,12 +93,12 @@ case $func in
 		sudo docker-compose up -d ;;
 	control )
 		echo "These are available options for you:" ; sleep 1
-		echo "status\t Show service status"
-		echo "freshclam\t Update ClamAV virus databases"
-		echo "update\t Check and update container packages"
-		echo "bash\t Start bash shell in container"
-		echo "restart\t Restart ClamAV services"
-		echo "exit\t Exit"
+		echo -e "status\t\t Show service status"
+		echo -e "freshclam\t Update ClamAV virus databases"
+		echo -e "update\t\t Check and update container packages"
+		echo -e "bash\t\t Start bash shell in container"
+		echo -e "restart\t\t Restart ClamAV services"
+		echo -e "exit\t\t Exit"
 		echo "What can I do for you?"
 		read -p "-> " operation
 		case $operation in
