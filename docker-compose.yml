@@ -7,9 +7,6 @@ services:
   ports:
       - 3310:3310
   tty: true
-  environment:
-      http_proxy: contabo.wikidemo.ir:3128
-      https_proxy: contabo.wikidemo.ir:3128
   volumes:
       - clamd_data:/var/lib/clamav
       - ./etc/crontab:/etc/crontab
