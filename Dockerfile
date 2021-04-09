@@ -4,7 +4,8 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y clamav \
 	clamav-daemon \
 	clamav-base \
 	clamav-freshclam \
-	clamdscan
+	clamdscan \
+	cron vim wget
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 #Update virus database for first time and copy samples
