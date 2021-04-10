@@ -9,7 +9,6 @@ sleep 2
 STATE=0
 while [[ $STATE -eq 0 ]]
 do
-	clamd &
 	CLAMD_STATE=`/etc/init.d/clamav-daemon status | grep 'Active' | sed  's/     //' | cut -f 2 -d ' '`
 	if [[ $CLAMD_STATE -eq active ]]
 	then
