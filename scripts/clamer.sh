@@ -2,8 +2,7 @@
 
 #Functions
 function wait(){
-	echo "==========================="
-        sleep 1
+	echo "===========================" ; sleep 1
 }
 
 function status(){
@@ -15,7 +14,7 @@ function status(){
 	echo "ClamAV recent logs"
 	tail -15 /var/log/clamav/clamav.log ; wait
 	echo "ClamAV virus database manager recent logs"
-        tail -15 /var/log/clamav/freshclam.log ; wait
+    tail -15 /var/log/clamav/freshclam.log ; wait
 }
 
 function fresh(){
@@ -25,7 +24,7 @@ function fresh(){
 }
 
 function os_update(){
-	"Checking for packages' updates..."
+	echo "Checking for packages' updates..."
 	sleep 1
 	apt update ; sleep 1
 	apt upgrade -y ; sleep 1
@@ -37,16 +36,16 @@ function restart(){
 	/etc/init.d/clamav-freshclam restart
 	wait
 	echo "Restarting ClamAV daemon..."
-        sleep 1
-        /etc/init.d/clamav-daemon restart
+    sleep 1
+    /etc/init.d/clamav-daemon restart
 }
 
 function help(){
 	echo "Usege:"
-        echo -e "status\t\t Show service status"
-        echo -e "freshclam\t Update ClamAV virus databases"
-        echo -e "update\t\t Check and update container packages"
-        echo -e "restart\t\t Restart ClamAV services"
+    echo -e "status\t\t Show service status"
+    echo -e "freshclam\t Update ClamAV virus databases"
+    echo -e "update\t\t Check and update container packages"
+    echo -e "restart\t\t Restart ClamAV services"
 }
 #Main function
 sleep 1

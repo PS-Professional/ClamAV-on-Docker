@@ -1,6 +1,4 @@
 #!/usr/bin/bash
-export http_proxy=contabo.wikidemo.ir:3128 && export HTTP_PROXY=contabo.wikidemo.ir:3128
-export https_proxy=contabo.wikidemo.ir:3128 && export HTTPS_PROXY=contabo.wikidemo.ir:3128
 /etc/init.d/clamav-freshclam start
 /etc/init.d/clamav-daemon start
 freshclam
