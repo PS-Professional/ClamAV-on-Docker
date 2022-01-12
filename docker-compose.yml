@@ -12,7 +12,6 @@ services:
       - ./etc/crontab:/etc/crontab
       - ./etc/clamav/clamd.conf:/etc/clamav/clamd.conf
       - ./etc/clamav/freshclam.conf:/etc/clamav/freshclam.conf
-      - /:/os-scan
   ulimits:
       nproc: 65535
       nofile:
