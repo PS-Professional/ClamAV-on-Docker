@@ -22,7 +22,7 @@ function help(){
 	echo -e "N/A\t\t Run script in interactive mode"
 	echo -e "init\t\t Install Docker and setup ClamAV image"
 	echo -e "start\t\t Start ClamAV container"
-	echo -e "control\t\t Control and set commands to ClamAV container"
+	echo -e "control\t\t Control and execute commands to ClamAV container"
 	echo -e "restart\t\t Restart ClamAV container"
 	echo -e "stop\t\t stop ClamAV container"
 }
@@ -107,7 +107,6 @@ case $func in
 		echo -e "status\t\t Show service status"
 		echo -e "freshclam\t Update ClamAV virus databases"
 		echo -e "update\t\t Check and update container packages"
-		echo -e "result\t\t Show your system scan results"
 		echo -e "bash\t\t Start bash shell in container"
 		echo -e "restart\t\t Restart ClamAV services"
 		echo -e "exit\t\t Exit"
@@ -120,8 +119,6 @@ case $func in
 				sudo docker-compose exec clamav clamer freshclam;;
 			update )
 				sudo docker-compose exec clamav clamer update;;
-			result )
-				sudo docker-compose exec clamav cat /os-scan-result.txt;;
 			bash )
 				sudo docker-compose exec clamav bash;;
 			restart )
@@ -182,7 +179,6 @@ else
 		echo -e "status\t\t Show service status"
 		echo -e "freshclam\t Update ClamAV virus databases"
 		echo -e "update\t\t Check and update container packages"
-		echo -e "result\t\t Show your system scan results"
 		echo -e "bash\t\t Start bash shell in container"
 		echo -e "restart\t\t Restart ClamAV services"
 		echo -e "exit\t\t Exit"
@@ -195,8 +191,6 @@ else
 				sudo docker-compose exec clamav clamer freshclam;;
 			update )
 				sudo docker-compose exec clamav clamer update;;
-			result )
-				sudo docker-compose exec clamav cat /os-scan-result.txt;;
 			bash )
 				sudo docker-compose exec clamav bash;;
 			restart )
